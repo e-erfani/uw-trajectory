@@ -1,0 +1,255 @@
+Verification file for Remote Sensing Systems' AMSR-2 (F34) binary data files
+
+
+PLEASE read any README.txt files in this and other previous directories
+prior to using this file.
+
+The following data can be used to determine if your adapted processing
+routine is correctly reading the RSS AMSR-2 binary data file.
+
+The binary file contains numbers 0 to 255
+0 - 250 are valid geophysical data.
+The remaining 5 numbers are coded: 
+251 = areas in which no data was processed
+252 = sea ice > 0%
+253 = bad data such as along coastline regions
+254 = regions of no observations
+255 = land
+
+These data are for a small section in the 
+Mozambique Channel just west of Madagascar. 
+LL 42.375,-21.625  to  UR 43.625,-20.625
+The array position is related to latitude and longitude by:
+  XLAT= 0.25*ILAT - 90.125
+  XLON= 0.25*ILON -  0.125
+
+All of the following data are listed with longitudinal values in columns
+and latitudinal values as rows.  Therefore, there are six columns and
+five rows per geophysical parameter.
+
+
+Values follow for Daily, 3-day, Weekly and Monthly maps in that order:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AMSR2 Daily Data
+File f34_20121206v8.gz
+***************daily ********************
+
+gmt time, valid data range 0 to 1440 (in minutes)
+      10.70      10.70      10.70      10.70      10.70     255.00
+      10.70      10.70      10.70      10.70      10.70     255.00
+      10.70      10.70      10.70      10.70      10.70      10.70
+      10.70      10.70      10.70      10.70      10.70      10.70
+      10.70      10.70      10.70      10.70      10.70      10.70
+
+sea surface temperature, valid data range -3 to 34.5 (degree C)
+      28.65      28.80      28.95     251.00     253.00     255.00
+      28.80      28.80      29.10     251.00     253.00     255.00
+      28.95      28.95      29.25     251.00     251.00     253.00
+      29.10      29.10      29.40      29.70     251.00     251.00
+      29.10      29.25      29.55      29.85      30.60     251.00
+
+wind speed low frequency, valid data range 0 to 50.0 (meters/second)
+       6.20       6.20       6.40     251.00     253.00     255.00
+       5.60       5.60       6.00       5.80     253.00     255.00
+       5.40       5.00       5.20       5.20     251.00     253.00
+       4.80       4.40       4.20       3.80       3.40     251.00
+       4.40       3.60       3.20       2.60       2.80       2.80
+
+wind speed medium frequency, valid data range 0 to 50.0 (meters/second)
+       5.80       5.60       6.00       6.20     253.00     255.00
+       5.40       5.40       5.40       6.00     253.00     255.00
+       5.00       4.40       4.80       4.80       3.80     253.00
+       4.60       4.20       4.00       3.40       2.80       3.60
+       3.80       3.40       3.00       2.40       2.40       2.80
+
+water vapor, valid data range 0 to 75 (millimeters)
+      34.50      36.30      37.50      38.40     253.00     255.00
+      35.40      36.60      37.80      39.30     253.00     255.00
+      36.00      37.50      39.60      41.70      44.10     253.00
+      37.20      39.30      40.50      43.50      45.00      45.00
+      39.00      40.20      41.40      44.40      45.00      46.20
+
+cloud, valid data range -0.05 to 2.45 (millimeters)
+      -0.03      -0.02      -0.02      -0.02     253.00     255.00
+      -0.02      -0.03      -0.03      -0.03     253.00     255.00
+      -0.02      -0.01      -0.01      -0.03      -0.02     253.00
+      -0.02      -0.01      -0.01      -0.02      -0.02      -0.04
+      -0.01       0.00      -0.01      -0.01      -0.03      -0.02
+
+rain rate, valid data range 0 to 25 (millimeters/hour)
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00       0.00     253.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+
+AMSR2 3-day Data
+File f34_20121205v8_d3d.gz    
+***********3-day******************
+                                                           
+ sea surface temperature, valid data range -3 to 34.5 (degree C)
+      28.04      27.90      28.20     251.00     253.00     255.00
+      28.20      28.20      28.35     251.00     253.00     255.00
+      28.35      28.20      28.50     251.00     251.00     253.00
+      28.50      28.35      28.65      28.80     251.00     251.00
+      28.95      28.65      28.80      28.95     29.10      251.00
+
+ wind speed low frequency, valid data range 0 to 50.0 (meters/second)
+       5.40       5.60       5.80     251.00     253.00     255.00
+       5.40       5.40       5.40       5.60     253.00     255.00
+       5.20       5.20       5.40       5.60     251.00     253.00
+       5.20       5.00       5.20       5.60       5.60     251.00
+       4.80       5.20       5.40       5.20       5.40       6.00
+
+ wind speed medium frequency, valid data range 0 to 50.0 (meters/second)
+       5.40       5.40       5.80       6.00     253.00     255.00
+       5.40       5.20       5.40       5.20     253.00     255.00
+       5.60       5.20       5.20       5.40       5.40     253.00
+       5.40       5.20       5.20       5.20       5.40       5.40
+       5.20       5.20       5.40       5.20       5.20       5.60
+
+ water vapor, valid data range 0 to 75 (millimeters)
+      44.70      44.40      43.50      42.60     253.00     255.00
+      45.00      45.30      44.70      44.40     253.00     255.00
+      45.00      45.60      45.30      45.00      44.70     253.00
+      45.30      45.90      45.60      45.30      44.40      43.80
+      45.90      46.20      45.90      45.30      44.70      43.80
+
+ cloud, valid data range -0.05 to 2.45 (millimeters)
+       0.00       0.00      -0.01      -0.01     253.00     255.00
+       0.00       0.00       0.00       0.01     253.00     255.00
+       0.00       0.00       0.00       0.00       0.00     253.00
+       0.01       0.01       0.00       0.01       0.00       0.00
+       0.00       0.00       0.00       0.00       0.00      -0.01
+
+ rain rate, valid data range 0 to 25 (millimeters/hour)
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00       0.00     253.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+
+AMSR2 Weekly Data
+File f34_20121208v8.gz
+***********weekly******************
+                                       
+ sea surface temperature, valid data range -3 to 34.5 (degree C)
+      28.20      28.20      28.65     251.00     253.00     255.00
+      28.20      28.35      28.50     251.00     253.00     255.00
+      28.50      28.50      28.65     251.00     251.00     253.00
+      28.65      28.65      28.80      29.10      30.15     251.00
+      28.80      28.80      28.95      29.25      29.40     251.00
+
+ wind speed low frequency, valid data range 0 to 50.0 (meters/second)
+       5.60       5.40       5.60     251.00     253.00     255.00
+       5.40       5.20       5.20       5.20     253.00     255.00
+       5.20       5.00       5.00       5.00     251.00     253.00
+       4.80       4.60       4.60       4.60       4.60     251.00
+       4.60       4.40       4.20       4.00       4.20       4.00
+
+ wind speed medium frequency, valid data range 0 to 50.0 (meters/second)
+       5.20       5.20       5.20       5.20     253.00     255.00
+       5.20       5.00       5.00       4.80     253.00     255.00
+       5.00       4.60       4.60       4.80       4.40     253.00
+       4.80       4.60       4.40       4.40       4.20       4.60
+       4.60       4.20       4.20       3.80       4.00       4.40
+
+ water vapor, valid data range 0 to 75 (millimeters)
+      41.70      42.00      42.00      42.00    253.00      255.00
+      42.30      42.90      42.90      43.50    253.00      255.00
+      42.60      43.20      44.10      44.70      45.00     253.00
+      43.20      44.10      44.40      45.00      45.00      45.30
+      43.50      44.40      44.70      45.00      45.00      45.30
+      
+ cloud, valid data range -0.05 to 2.45 (millimeters)
+      -0.01      -0.01      -0.01      -0.01     253.00     255.00
+      -0.01      -0.01      -0.01      -0.01     253.00     255.00
+      -0.01      -0.01      -0.01      -0.01       0.00     253.00
+       0.00       0.00       0.00       0.00      -0.01      -0.01
+       0.00       0.00       0.00       0.00      -0.01      -0.01
+
+ rain rate, valid data range 0 to 25 (millimeters/hour)
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00       0.00     253.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+ 
+AMSR2 Monthly Data
+File f34_201212v8.gz
+***********monthly******************
+                                       
+ sea surface temperature, valid data range -3 to 34.5 (degree C)
+      28.65      28.80      29.10     251.00     253.00     255.00
+      28.80      28.95      29.10     251.00     251.00     255.00
+      28.95      28.95      29.25      28.50     251.00     251.00
+      29.10      29.10      29.25      29.40      29.55     251.00
+      29.25      29.10      29.25      29.40      29.55     251.00
+
+ wind speed low frequency, valid data range 0 to 50.0 (meters/second)
+       5.20       5.00       5.20       1.40     253.00     255.00
+       5.00       5.00       5.00       5.20     251.00     255.00
+       4.80       4.80       4.80       5.00       3.80     251.00
+       4.40       4.40       4.40       4.60       4.80     251.00
+       4.20       4.40       4.40       4.40       4.60       4.60
+
+ wind speed medium frequency, valid data range 0 to 50.0 (meters/second)
+       5.00       5.00       5.00       5.00     253.00     255.00
+       4.80       4.80       4.80       4.80       4.80     255.00
+       4.60       4.60       4.60       4.60       4.80       5.40
+       4.40       4.40       4.20       4.40       4.60       4.80
+       4.20       4.20       4.20       4.20       4.40       4.40
+
+ water vapor, valid data range 0 to 75 (millimeters)
+      41.40      41.70      41.70      42.00     253.00     255.00
+      42.00      42.30      42.60      42.60      40.80     255.00
+      42.90      42.90      42.90      43.20      43.80      41.40
+      43.80      43.80      43.50      43.80      44.10      44.40
+      43.80      44.10      44.40      44.40      44.70      45.00
+
+ cloud, valid data range -0.05 to 2.45 (millimeters)
+       0.03       0.02       0.01       0.01     253.00     255.00
+       0.03       0.01       0.02       0.01      -0.01     255.00
+       0.02       0.01       0.01       0.01       0.01       0.00
+       0.04       0.02       0.01       0.01       0.04       0.04
+       0.02       0.02       0.02       0.02       0.04       0.01
+
+ rain rate, valid data range 0 to 25 (millimeters/hour)
+       0.10       0.00       0.00       0.00     253.00     255.00
+       0.00       0.00       0.00       0.00       0.00     255.00
+       0.00       0.00       0.00       0.00       0.00       0.00
+       0.10       0.00       0.00       0.00       0.10       0.20
+       0.00       0.00       0.00       0.00       0.10       0.00
+       
+If you have different values, please check your program first before contacting RSS.
+
+If you continue to have trouble, contact RSS support:
+http://www.remss.com/support
+
+
