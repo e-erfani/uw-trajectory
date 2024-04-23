@@ -1,0 +1,22 @@
+name: trace
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - netcdf4=1.5.1
+  - xarray #=0.13.0
+  - matplotlib #=3.1.3
+  - seaborn=0.10.0
+  - ipykernel=5.1.4
+  - dask
+  - pip
+  - conda-forge::proj4=5.2.0
+  - basemap
+  - h5netcdf=0.7.4 
+
+  - pip:
+    - sklearn
+    - cdsapi
+prefix: /home/disk/p/jkcm/anaconda3/envs/uwtrajectory
+
+
