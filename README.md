@@ -43,8 +43,7 @@ You can check the libraries in the file "conda_env.yml", but the versions of the
 ### Data acquisition and Preparation
 
 ##### Summary:
-
-![datasets](https://github.com/e-erfani/uw-trajectory/assets/28571068/ec10c38d-b56c-40bd-b754-218bbea604ed)
+![datasets](https://github.com/e-erfani/uw-trajectory/assets/28571068/f2e673f4-ddeb-429c-b96b-4057788dccd1)
 
 A Python code is created to download all these datasets for multiple years and months [The final version to be uploaded].
 
