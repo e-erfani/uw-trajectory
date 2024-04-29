@@ -44,14 +44,14 @@ You can check the libraries in the file "conda_env.yml", but the versions of the
 
 ##### Summary:
 
-![datasets](https://github.com/e-erfani/uw-trajectory-main/assets/28571068/ec10c38d-b56c-40bd-b754-218bbea604ed)
+![datasets](https://github.com/e-erfani/uw-trajectory/assets/28571068/ec10c38d-b56c-40bd-b754-218bbea604ed)
 
 A Python code is created to download all these datasets for multiple years and months [The final version to be uploaded].
 
 
 #### More details are provided regarding data acquisition and preparation:
 
-Any example code needed for this purpose is provided in this directory: [uwtrajectory/Data_Preparation](https://github.com/e-erfani/uw-trajectory-main/tree/main/uwtrajectory/Data_Preparation)
+Any example code needed for this purpose is provided in this directory: [uwtrajectory/Data_Preparation](https://github.com/e-erfani/uw-trajectory/tree/main/uwtrajectory/Data_Preparation)
 
 #### ERA5 surface and pressure:
 - To create an account, log in, and create .cdsapirc file in your $HOME Linux, check this [website](https://cds.climate.copernicus.eu/api-how-to)
@@ -67,9 +67,9 @@ conda install ecmwf-api-client
 - **Note:** recommend downloading **a separate ERA5 file for each DAY** since this is the format compatible with the trajectory package.
 - Example Python scripts (Direct_Download_Pressure.py, Direct_Download_Surface.py, and Direct_Download_Ensemble.py) are created that take the yyyy mm dd as arguments, submit the request to cdc, and download ERA5 data directly to the Linux server. Make sure to modify the script for your own path, data type, variables, levels, and region. Also, invoke the command with & to run in the background (it might take hours or more to get one daily file): 
 
-nohup ipython [Direct_Download_Pressure.py](https://github.com/e-erfani/uw-trajectory-main/blob/main/uwtrajectory/Data_Preparation/Direct_Download_Pressure.py) 2019 6 10 &
+nohup ipython [Direct_Download_Pressure.py](https://github.com/e-erfani/uw-trajectory/blob/main/uwtrajectory/Data_Preparation/Direct_Download_Pressure.py) 2019 6 10 &
 
-nohup ipython [Direct_Download_Surface.py](https://github.com/e-erfani/uw-trajectory-main/blob/main/uwtrajectory/Data_Preparation/Direct_Download_Surface.py) 2019 6 10 &
+nohup ipython [Direct_Download_Surface.py](https://github.com/e-erfani/uw-trajectory/blob/main/uwtrajectory/Data_Preparation/Direct_Download_Surface.py) 2019 6 10 &
 
 
 #### MERRA2 aerosols:
@@ -131,7 +131,7 @@ or
 
 wget https://data.remss.com/amsr2/ocean/L3/v08.2/daily/2019/RSS_AMSR2_ocean_L3_daily_2019-04-{01..30}_v08.2.nc  (not used in this study)
 
-- The original data format is binary. Use this script [RSS_bytemaps_to_netcdf.ipynb](https://github.com/e-erfani/uw-trajectory-main/blob/main/uwtrajectory/Data_Preparation/RSS_bytemaps_to_netcdf.ipynb) to unify the data and save in NetCDF format.
+- The original data format is binary. Use this script [RSS_bytemaps_to_netcdf.ipynb](https://github.com/e-erfani/uw-trajectory/blob/main/uwtrajectory/Data_Preparation/RSS_bytemaps_to_netcdf.ipynb) to unify the data and save in NetCDF format.
 - **Note:** This script is prepared to convert data for **a full month**, so make sure data is available for a specific month, and use the script iteratively if you need to convert more than one month of data. The output of the script will be **a separate file for each month**.
 
 
@@ -142,7 +142,7 @@ wget https://data.remss.com/amsr2/ocean/L3/v08.2/daily/2019/RSS_AMSR2_ocean_L3_d
 
 wget -r --no-parent --reject "index.html*" https://data.remss.com/ssmi/f18/bmaps_v08/y2019/m04/
 
-- The original data format is binary. Use this script [RSS_bytemaps_to_netcdf.ipynb](https://github.com/e-erfani/uw-trajectory-main/blob/main/uwtrajectory/Data_Preparation/RSS_bytemaps_to_netcdf.ipynb) to unify the data and save in NetCDF format.
+- The original data format is binary. Use this script [RSS_bytemaps_to_netcdf.ipynb](https://github.com/e-erfani/uw-trajectory/blob/main/uwtrajectory/Data_Preparation/RSS_bytemaps_to_netcdf.ipynb) to unify the data and save in NetCDF format.
 - **Note:** This script is prepared to convert data for **a full month**, so make sure data is available for a specific month, and use the script iteratively if you need to convert more than one month of data. The output of the script will be **a separate file for each month**.
 
 
