@@ -2,23 +2,10 @@
 
 ### Authors:
 This package was developed by Johannes Mohrmann and was set up for CSET 2015 field campaign. 
-Ehsan Erfani modified the package for 2019 ship track cases with some other updates, outlined below.
+Ehsan Erfani generalized the package for ship track cases in subtropical deck regions with some other updates, outlined below.
 
-### Original notes:
-Maintainer: Johannes Mohrmann
-
-Code repository for the running of wind-driven trajectories, based on model or reanalysis gridded winds, and the colocation and extraction of geospatial datasets along trajectories. 
-
-Todo: all of it!
-
-###### Notes on geographic regions:
-CSET (NEP) should 0N-60N, and 160W-110W (200E-250E)
-ORACLES (SEA) should be 40S-5N, 20W-10E (340E-10E)
-
-###### Notes on data acquisition:
-for ERA5, while there exists a python API, it is not instantaneous. Either the code can be made asynchronous, or (faster) a user can download the data themselves.
-SSMI: downloaded from RSS - can be automated (just wget), but then transformed with classified-code. need to add code to this repo
-CERES: currently downloading from larc, using data order tool
+### The analyses are featured in:
+Erfani, E., Wood, R., Blossey, P., Doherty, S., Eastman, R. (2024). Building a comprehensive library of observed Lagrangian trajectories for testing modeled cloud evolution, aerosol-cloud interactions, and marine cloud brightening, EGUsphere, 1-52, https://doi.org/10.5194/egusphere-2024-3232
 
 #
 # 
