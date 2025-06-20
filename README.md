@@ -7,6 +7,8 @@ Ehsan Erfani generalized the package for ship track cases in subtropical deck re
 ### The analyses are featured in:
 Erfani, E., Wood, R., Blossey, P., Doherty, S., Eastman, R. (2024). Building a comprehensive library of observed Lagrangian trajectories for testing modeled cloud evolution, aerosol-cloud interactions, and marine cloud brightening, EGUsphere, 1-52, https://doi.org/10.5194/egusphere-2024-3232
 
+Erfani, E., Blossey, P., Wood, R., Mohrmann, J., Doherty, S. J., Wyant, M., & O, K. (2022). Simulating aerosol lifecycle impacts on the subtropical stratocumulus-to-cumulus transition using large-eddy simulations. Journal of Geophysical Research: Atmospheres, 127, e2022JD037258. https://doi.org/10.1029/2022JD037258
+
 #
 # 
 ## Notes added by Ehsan Erfani
@@ -176,11 +178,6 @@ from mpl_toolkits.basemap import Basemap
 
 ```
 #
-### The analyses are featured in:
-Erfani, E., Wood, R., Blossey, P., Doherty, S., & Eastman, R. (2022). Using a phase space of environmental variables to drive an ensemble of cloud-resolving simulations of low marine clouds, American Geophysical Union (AGU) Fall Meeting, Chicago, IL, 12-16 Dec. 2022, (poster). http://dx.doi.org/10.13140/RG.2.2.25888.66562/1
-
-Erfani, E., Blossey, P., Wood, R., Mohrmann, J., Doherty, S. J., Wyant, M., & O, K. (2022). Simulating aerosol lifecycle impacts on the subtropical stratocumulus-to-cumulus transition using large-eddy simulations. Journal of Geophysical Research: Atmospheres, 127, e2022JD037258. https://doi.org/10.1029/2022JD037258
-
 #
 ### Disclaimer:
 The software is provided "as is", without warranty of any kind. In no event shall the authors be liable for any claim, damages, or other liability.
