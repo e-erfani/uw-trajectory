@@ -83,8 +83,16 @@ def add_MERRA_to_trajectory(ds, box_degrees=2):
         for varname,params in les_utils.merra_species_dict_colarco.items():
             vals_to_add.append(varname)
             var = merra_data[varname]
-
-            num=les_utils.mass_to_number(mass=var, air_density=merra_data.AIRDENS.values, shape_params=params)
+            
+            if varname == 'SO4':
+                ### applying a multiplication of sulfate mass by 1.3756 to convert sulfate ion, SO4, 
+                ### to ammonium sulfate, (NH4)2 SO4 , as the most likely form of sulfate in the atmosphere. 
+                ### Reference: Section 3.1 (page 4) of the document below  
+                ###.     Collow, A., V. Buchard, M. Chin, P. Colarco, A. Darmenov, and A. da Silva, 2023:Supplemental Documentation for GEOS Aerosol Products. GMAO Office Note No. 22 (Version1.1), 8 pp, 
+                ###.     https://gmao.gsfc.nasa.gov/pubs/office_notes.https://gmao.gsfc.nasa.gov/pubs/docs/Collow1489.pdf
+                num=les_utils.mass_to_number(mass=var*1.3756, air_density=merra_data.AIRDENS.values, shape_params=params)
+            else:
+                num=les_utils.mass_to_number(mass=var, air_density=merra_data.AIRDENS.values, shape_params=params)
 
             na_tot = na_tot+num
             merra_data[varname+'_Na'] = (('time', 'lev', 'lat', 'lon'), num)
