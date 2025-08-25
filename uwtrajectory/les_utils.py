@@ -393,7 +393,9 @@ def mass_to_number_trunc_power(mass, particle_density, upper_lim, lower_lim, air
     
     @lru_cache(maxsize=500)
     def n0_per_v0(particle_density, lower_lim, upper_lim):
-        novo = 9/particle_density*(lower_lim**-3 - upper_lim**-3)/(4*np.pi*np.log(upper_lim/lower_lim))*1e18 # per um3 to per m3
+        # novo = 9/particle_density*(lower_lim**-3 - upper_lim**-3)/(4*np.pi*np.log(upper_lim/lower_lim))*1e18 # per um3 to per m3
+        ## remove a factor of 9
+        novo = 1/particle_density*(lower_lim**-3 - upper_lim**-3)/(4*np.pi*np.log(upper_lim/lower_lim))*1e18 # per um3 to per m3
         return novo
     
     novo = n0_per_v0(particle_density, lower_lim, upper_lim)
