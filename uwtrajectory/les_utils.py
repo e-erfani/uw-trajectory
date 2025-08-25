@@ -336,8 +336,10 @@ def mass_to_number_trunc_MG(mass, particle_density, air_density, upper_lim, lowe
 
 
 
-def mass_to_number_trunc_lognormal(mass, particle_density, mode_radius, geo_std_dev, air_density, upper_lim, lower_lim=0.1):
+def mass_to_number_trunc_lognormal(mass, particle_density, mode_radius, geo_std_dev, air_density, upper_lim, lower_lim):
     #get the mass to number the old way, by integrating.
+    from scipy.special import erf
+
     @lru_cache(maxsize=500)
     def n0_per_v0(mode_radius, geo_std_dev, upper_lim, lower_lim):
         mu_g = mode_radius
@@ -362,8 +364,17 @@ def mass_to_number_trunc_lognormal(mass, particle_density, mode_radius, geo_std_
 
     n_0 = n0_per_v0(mode_radius, geo_std_dev, upper_lim, lower_lim)*mass/particle_density*1e18 # per um3 to per m3
     num_cm3 = air_density*n_0*1e-6
+
+    ### calculate fraction of particles with radius > 50 nm or diameter > 100nm
+    r_cutoff = 0.05  ### 0.05 μm = 50 nm
+    x = (np.log(r_cutoff / mode_radius )) / (np.sqrt(2) * np.log(geo_std_dev))  
+    fraction_rgt_50nm = 0.5 * (1 - erf(x))
+
+    ### Multiply by total concentration by the fraction to give
+    ### number concentration for aerosols with D > 100 nm (or r>50nm)
+    num_cm3_rgt_50nm = num_cm3 * fraction_rgt_50nm
     
-    return num_cm3
+    return num_cm3_rgt_50nm
 
 # def mass_to_number_trunc_lognormal_bimodal(mass, particle_density, mode_radius, geo_std_dev, mode_radius_2, geo_std_dev_2, air_density, upper_lim=None, lower_lim=0.1):
 #     mu_g = mode_radius
