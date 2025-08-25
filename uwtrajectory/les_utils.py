@@ -91,11 +91,16 @@ merra_species_dict_colarco = {
           # NOTE: Dust Rm is a guess, based on Re and lognormal, not great
 
         # NOTE: SST lower not included
-    'OCPHILIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.20, mode_radius=0.0212, upper=0.3),
-    'OCPHOBIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.20, mode_radius=0.0212, upper=0.3),
-    'BCPHILIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.00, mode_radius=0.0118, upper=0.3),
-    'BCPHOBIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.00, mode_radius=0.0118, upper=0.3),
-    'SO4': dict(dist='trunc_lognormal', density=1700, geometric_std_dev=2.03, mode_radius=0.0695, upper=0.3),
+      ## - NOTE 20250824: revise the dict based on 
+      ###                 NASA/TM‒2022‒104606/Vol. 63 Technical Report Series on Global Modeling and Data Assimilation Volume 63, see Table 1 on page 21
+      ###.                https://gmao.gsfc.nasa.gov/pubs/docs/Kemppinen1447.pdf#page=24.09
+      ###.  1. add lower limit of 0.0001 µm for OC and BC, and 0.005 µm for sulfate.
+      ###.  2. update density pf BC from 1800 to 1000 kg m-3
+    'OCPHILIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.20, mode_radius=0.0212, upper=0.3, lower=0.0001),
+    'OCPHOBIC': dict(dist='trunc_lognormal', density=1800, geometric_std_dev=2.20, mode_radius=0.0212, upper=0.3, lower=0.0001),
+    'BCPHILIC': dict(dist='trunc_lognormal', density=1000, geometric_std_dev=2.00, mode_radius=0.0118, upper=0.3, lower=0.0001),
+    'BCPHOBIC': dict(dist='trunc_lognormal', density=1000, geometric_std_dev=2.00, mode_radius=0.0118, upper=0.3, lower=0.0001),
+    'SO4': dict(dist='trunc_lognormal', density=1700, geometric_std_dev=2.03, mode_radius=0.0695, upper=0.3, lower=0.005),
     'DU001': dict(dist='power_special', effective_radius=0.73, density=2500, geometric_std_dev=2.00, mode_radius=0.220),  # weird bin
     'DU002': dict(dist='power', effective_radius=1.4, density=2650, geometric_std_dev=2.00, mode_radius=0.421, upper=1.8, lower=1.0),
     'DU003': dict(dist='power', effective_radius=2.4, density=2650, geometric_std_dev=2.00, mode_radius=0.7220, upper=3.0, lower=1.8),
