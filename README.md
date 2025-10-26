@@ -5,7 +5,7 @@ This package was developed by Johannes Mohrmann and was set up for CSET 2015 fie
 Ehsan Erfani generalized the package for ship track cases in subtropical deck regions with some other updates, outlined below.
 
 ### The analyses are featured in:
-Erfani, E., Wood, R., Blossey, P., Doherty, S., Eastman, R. (2024). Building a comprehensive library of observed Lagrangian trajectories for testing modeled cloud evolution, aerosol-cloud interactions, and marine cloud brightening, EGUsphere, 1-52, https://doi.org/10.5194/egusphere-2024-3232
+Erfani, E., Wood, R., Blossey, P., Doherty, S. J., and Eastman, R. (2025). Building a comprehensive library of observed Lagrangian trajectories for testing modeled cloud evolution, aerosol–cloud interactions, and marine cloud brightening, Atmos. Chem. Phys., 25, 8743–8768, https://doi.org/10.5194/acp-25-8743-2025
 
 Erfani, E., Blossey, P., Wood, R., Mohrmann, J., Doherty, S. J., Wyant, M., & O, K. (2022). Simulating aerosol lifecycle impacts on the subtropical stratocumulus-to-cumulus transition using large-eddy simulations. Journal of Geophysical Research: Atmospheres, 127, e2022JD037258. https://doi.org/10.1029/2022JD037258
 
